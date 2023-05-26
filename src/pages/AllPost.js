@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Loader from "../components/Loader";
 
 const AllPost = () => {
-  const petsUrl = `http://localhost:5000/pets`;
+  const petsUrl = `https://pet-adoption-platform-server.vercel.app/pets`;
   const {
     isLoading,
     error,
@@ -22,7 +22,7 @@ const AllPost = () => {
   const handleDelete = (pr) => {
     const agree = window.confirm(`Are you sure to delete ${pr.name}`);
     if (agree) {
-      fetch(`http://localhost:5000/myposts/${pr._id}`, {
+      fetch(`https://pet-adoption-platform-server.vercel.app/myposts/${pr._id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

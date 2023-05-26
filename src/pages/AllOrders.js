@@ -4,7 +4,7 @@ import { toast } from 'react-hot-toast';
 import Loader from '../components/Loader';
 
 const AllOrders = () => {
-    const bookingsUrl = `http://localhost:5000/mybookings`;
+    const bookingsUrl = `https://pet-adoption-platform-server.vercel.app/mybookings`;
   const {
     isLoading,
     error,
@@ -22,7 +22,7 @@ const AllOrders = () => {
   const handleDelete = (pr) => {
     const agree = window.confirm(`Are you sure to delete ${pr.name}`);
     if (agree) {
-      fetch(`http://localhost:5000/bookings/${pr._id}`, {
+      fetch(`https://pet-adoption-platform-server.vercel.app/bookings/${pr._id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
