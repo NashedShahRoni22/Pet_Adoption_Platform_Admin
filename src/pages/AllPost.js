@@ -67,7 +67,7 @@ const AllPost = () => {
                     <div>
                       <div className="font-bold">{pet.name}</div>
                       <div className="text-sm opacity-50">{pet.genre}</div>
-                      <div className="text-sm opacity-50">{pet.price}</div>
+                      <div className="text-sm opacity-50">{pet.price} BDT</div>
                     </div>
                   </div>
                 </td>
